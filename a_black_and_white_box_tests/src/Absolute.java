@@ -1,6 +1,6 @@
 // Code for White-box test exercise
 
-public class absolute{
+public class Absolute {
 
     public static int absoluteValueOf(int x) {
         if (x < -1)
