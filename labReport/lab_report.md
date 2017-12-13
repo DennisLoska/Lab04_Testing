@@ -22,6 +22,8 @@ This is because the conditional in `Absolute.absoluteValueOf(int x)` is not corr
 
 
 ### 2. Black-box-test:
+In order to test `GradingScale.class` we need to cd into the directory this file is saved to and run the application by typing `java GradingScale` into the Terminal.
+
 
 ### 3. White-box-test:
 
