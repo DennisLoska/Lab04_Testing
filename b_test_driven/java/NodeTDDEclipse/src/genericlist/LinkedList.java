@@ -9,7 +9,7 @@ public class LinkedList<E> {
         listLength = 0;
     }
 
-    void add(Node node) {
+    void add(Node<E> node) {
         if (head == null) {
             head = node;
             listLength++;
@@ -28,9 +28,9 @@ public class LinkedList<E> {
             return;
         }
 
-        Node next = null;
+        Node<E> next;
         Node<E> current = head;
-        Node prev = null;
+        Node<E> prev = null;
         while (current != null){
             next = current.next;
             current.next = prev;

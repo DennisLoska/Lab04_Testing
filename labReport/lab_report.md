@@ -65,5 +65,14 @@ Here we can see that the program only runs
 ### 4. Reflection:
 
 ## Part 2: Test Driven Development
+**Reversing a List**
+As the assignment told us we started by implementing test cases for a linked list.
+For this we created a new class called `LinkedListTest`.
+In there we created tests for reversing a single item list, an empty list and a multiple item list.
+Because we chose to implement a generic LinkedList we also created a test for reversing a mixed data type list.
+While implementing the method `reverse()` we have noticed that the LinkedList was lacking an `add()` method so we went ahead created a test and implemented that method.
+With a little bit of help from [here](http://www.geeksforgeeks.org/reverse-a-linked-list/) we were able to implement the reversal without any bigger issues.
+Our main issue was that trying to implement a completely new `toString()` method was completely useless since the Node class already had a recursive method for doing just that implemented. So we just used this method.
+  
 
 
