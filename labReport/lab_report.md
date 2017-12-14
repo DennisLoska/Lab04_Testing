@@ -131,8 +131,7 @@ Due to its progressive nature, one can hardly test inputs and outputs effectivel
 
 In order to delete a link, we first need to have a LinkedList filled with some nodes. So the test-case needs to create a list with nodes and then makes an attempt to delete the first one. This can be monitored using the _size_ of the LinkedList
 
-´´´java
-
+´´´
     public void removeFromLinkedList(){
         LinkedList<String> ll = new LinkedList<>();
         ll.add(new Node<>("HUHU"));
@@ -149,7 +148,6 @@ In order to delete a link, we first need to have a LinkedList filled with some n
           listLength--;
       }
     }
-   
 ´´´
 
 ### Reversing a List
