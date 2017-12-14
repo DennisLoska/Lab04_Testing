@@ -73,12 +73,12 @@ For clarification, please take a look at the code graph.
 ![Code Graph](https://web.whatsapp.com/8e6e5a11-0dae-4249-9b35-b1edcf8cc023)
 	
 	Overview of conditions
-(1)	if (income < 0)
-(2)	if (nFamilyMembers <= 0)
-(3)	 if (income < 10000)
+-	if (income < 0)
+-	if (nFamilyMembers <= 0)
+-	if (income < 10000)
 	else if (income < 50000)
 	else
-(4)	if (taxTotal < 0)
+-	if (taxTotal < 0)
 
 
 Test cases are actually a combination of the follow:
