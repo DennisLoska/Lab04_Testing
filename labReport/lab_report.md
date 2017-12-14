@@ -149,7 +149,7 @@ In order to delete a link, we first need to have a LinkedList filled with some n
           listLength--;
       }
     }
-	
+
 ´´´
 
 ### Reversing a List
