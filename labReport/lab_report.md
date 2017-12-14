@@ -70,7 +70,7 @@ Here we can see that the program only runs
 
 In general, we can speak of up to 5 independent paths - as due to various contraints introducing new nodes.
 For clarification, please take a look at the code graph. 
-![Code Graph](/images/codegraph.jpg)
+![Code Graph](/labReport/images/codegraph.jpg)
 	
 	Overview of conditions
 -	if (income < 0)
