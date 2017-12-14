@@ -22,55 +22,36 @@ The normal cases are:
 - `testUnSignedValueOf1()`
 - `testUnSignedValueOf2()`
 
-From these test cases we can see that only 1 test is failing which is `testSignedValueOf1()`.
-This is because the conditional in `Absolute.absoluteValueOf(int x)` is not correct. We compare with `<` instead we should compare with `<=`. Also the value to be compared to during the condition should be 0 rather than -1. This way this test would be succesful. For that reason, the return value of -1 should be 1 and not -1 as well. 
+From these test cases we can see that only 1 test is failing which is `testSignedValueOf1()`. This is because the conditional in `Absolute.absoluteValueOf(int x)` is not correct. We compare with `<` instead we should compare with `<=`. Also the value to be compared to during the condition should be 0 rather than -1. This way this test would be succesful. For that reason, the return value of -1 should be 1 and not -1 as well. 
 
 
 ### 2. Black-box-test:
-In order to test `GradingScale.class` we need to cd into the directory this file is saved to and run the application by typing `java GradingScale` into the Terminal.
-Then the application allows us to insert numerical values into the terminal line by line.
-This should print the corresponding Grades to the terminal as long as values between 0 and 100 are entered. At last the program should return the average when the value -1 is entered.
+In order to test `GradingScale.class` we need to cd into the directory this file is saved to and run the application by typing `java GradingScale` into the Terminal. Then the application allows us to insert numerical values into the terminal line by line. This should print the corresponding Grades to the terminal as long as values between 0 and 100 are entered. At last the program should return the average when the value -1 is entered.
+
+For each grade 2 values are tested, the minimum to receive the grade, the maximum to receive the grade. The avg of the received grades also needs to be tested.
+
 So the equivalence classes for this application would be:
+
+for normal cases:
 - input values in range(100)
 - input value -1 prints average
+
+for illegal cases: 
 - input values <-1 and >100
-- program runs till -1 is entered
 
-<<<<<<< HEAD
-euivalence classes:
-For each grade 2 values are tested, the minimum to receive the grade, 
-the maximum to receive the grade. The avg of the received grades also needs to be tested.
+Since the application is able to get multiple inputs at a time, we went ahead and populated generic textfiles with sample data that we can then feed into the GradingScale by using the pipe command `|` in bash.
 
-To test the return value for grades:
+The ouput is however off - after black box testing, we found the following issues: 
 
-edge cases:
-- maxPercentageof()
-- minPercentageof()
-
-normal cases
-- avgPercentageof()
-
-illegal cases
--overHundred()
-
-The ouput is off: 
 50: F (instead of E)
 over 100: B (instead of error message)
 -1: AVG is calculated based on number of inputs overall instead of number of inputs related to grades.
-=======
-Since the application is able to get multiple inputs at a time, we went ahead and populated generic textfiles with sample data that we can then feed into the GradingScale by using the pipe command `|` in bash.
+
 
 Here are the results for the different tests: <br>
 **test 01: input values in range 100**
 
 ![inputValuesInRange100](/Users/tweak/CloudStation/IMI/03_Semester/Informatik-03/labs/Lab04_Testing/labReport/images/inputValuesInRange100.png)
-
-This is only some of the output because the whole output (101 lines) would be too much for this report.
-
-By comparing the output to the GradinScale provided with the assignment we can say that the program works for all input value inside the range of 100.
-
-The value -1 also prints the average.
-
 
 
 **test 02: input values in range 100 without average**
@@ -79,14 +60,12 @@ The value -1 also prints the average.
 
 This is the same output as test01 but now the loss of the value -1 at the end of file causes the program to return a NullPointerException
 
-
-
 **test 03: normal input values with -1 in the middle**
 
 ![average in middle](/Users/tweak/CloudStation/IMI/03_Semester/Informatik-03/labs/Lab04_Testing/labReport/images/average in middle.png)
 
 Here we can see that the program only runs 
->>>>>>> 9f3c519d87acd267648a0f8118e4961081ec0f06
+
 
 ### 3. White-box-test:
 

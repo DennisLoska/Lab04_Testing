@@ -18,7 +18,8 @@ public class TaxTime {
 
     public static void main(String[] args) {
 
-        // A Reader stream to read from the console
+       
+    	// (A)
         BufferedReader in =
             new BufferedReader(new InputStreamReader(System.in));
 
@@ -39,7 +40,8 @@ public class TaxTime {
             System.out.println ("Start over.");
             System.exit (-1);
         }
-
+        
+        //(B)
         System.out.print("Enter the number of dependents you have, including yourself: ");
         try {
             String s = in.readLine();
@@ -59,21 +61,28 @@ public class TaxTime {
 //    compute tax total
 
       if (income < 10000)
+    	  //(C)
          taxTotal = 0.12 * income;
       else if (income < 50000)
+    	  //(D)
          taxTotal = 300.00 + 0.24 * (income - 10000);
       else
+    	  //(E)
          taxTotal = 1500.00 + 0.36 * (income - 50000);
 
       for (int i = 0; i <= nFamilyMembers; i++){
+    	  //(F)
            taxTotal = taxTotal - 100;
       }
 
 //    check negative tax
-
+.
     if (taxTotal < 0) // In case of negative tax
+    	//()G
        taxTotal=0;
 
+    
+    //END
     System.out.println ("=€=€=€=€=€=€=€=€=€=€=€=€=€=€=€");
     System.out.println ("Wowereit & Sarrazin GmbH");
     System.out.println ("Tax bill");
