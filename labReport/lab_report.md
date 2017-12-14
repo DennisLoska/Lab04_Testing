@@ -70,8 +70,11 @@ Here we can see that the program only runs
 
 In general, we can speak of up to 5 independent paths - as due to various contraints introducing new nodes.
 For clarification, please take a look at the code graph. 
+
+
 ![Code Graph](https://github.com/DennisLoska/Lab04_Testing/blob/master/labReport/images/codegraph.jpg?raw=true)
-	
+
+
 	Overview of conditions
 -	if (income < 0)
 -	if (nFamilyMembers <= 0)
