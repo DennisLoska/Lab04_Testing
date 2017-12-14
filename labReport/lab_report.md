@@ -10,7 +10,7 @@ In this exercise we have tested edge cases and normal cases for the class `Absol
 
 =======
 In this exercise we have tested edge cases and normal cases for the class `Absolute.java`. <br>
->>>>>>> 9f3c519d87acd267648a0f8118e4961081ec0f06
+
 The edge cases are:
 - `testZero()`
 - `testMaxValue()`
@@ -53,7 +53,6 @@ Here are the results for the different tests: <br>
 
 ![inputValuesInRange100](/Users/tweak/CloudStation/IMI/03_Semester/Informatik-03/labs/Lab04_Testing/labReport/images/inputValuesInRange100.png)
 
-
 **test 02: input values in range 100 without average**
 
 ![inputValuesInRange100_withoutAverage](/Users/tweak/CloudStation/IMI/03_Semester/Informatik-03/labs/Lab04_Testing/labReport/images/inputValuesInRange100_withoutAverage.png)
@@ -71,9 +70,8 @@ Here we can see that the program only runs
 
 In general, we can speak of up to 5 independent paths - as due to various contraints introducing new nodes.
 For clarification, please take a look at the code graph. 
-
-![alt text](https://web.whatsapp.com/8e6e5a11-0dae-4249-9b35-b1edcf8cc023)
-
+![Code Graph](https://web.whatsapp.com/8e6e5a11-0dae-4249-9b35-b1edcf8cc023)
+	
 	Overview of conditions
 (1)	if (income < 0)
 (2)	if (nFamilyMembers <= 0)
@@ -81,6 +79,7 @@ For clarification, please take a look at the code graph.
 	else if (income < 50000)
 	else
 (4)	if (taxTotal < 0)
+
 
 Test cases are actually a combination of the follow:
 
