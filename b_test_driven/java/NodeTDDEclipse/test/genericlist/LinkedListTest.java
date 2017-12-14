@@ -2,6 +2,7 @@ package genericlist;
 
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
 public class LinkedListTest {
@@ -15,10 +16,12 @@ public class LinkedListTest {
 
     @Test
     public void removeFromLinkedList(){
-        /*
-        * @dennis
-        *       hier darfst du deinen Test implementieren ;)
-        * */
+        LinkedList<String> ll = new LinkedList<>();
+        ll.add(new Node<>("HUHU"));
+        ll.add(new Node<>("HAHA"));
+        ll.add(new Node<>("HIHI"));
+        ll.remove();
+        assertEquals(2,ll.getListLength());
     }
 
     @Test

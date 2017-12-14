@@ -1,5 +1,4 @@
 package genericlist;
-
 public class LinkedList<E> {
     private Node<E> head;
     private int listLength;
@@ -21,6 +20,14 @@ public class LinkedList<E> {
             current.next = node;
             listLength++;
         }
+    }
+
+    void remove(){
+        //deletes the first link
+      if (head != null){
+          head = head.next;
+          listLength--;
+      }
     }
 
     void reverse() {
@@ -48,5 +55,9 @@ public class LinkedList<E> {
             sb.append(head.toString());
         }
         return sb.toString();
+    }
+
+    public int getListLength() {
+        return listLength;
     }
 }

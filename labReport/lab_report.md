@@ -126,7 +126,34 @@ Test Cases:
 Due to its progressive nature, one can hardly test inputs and outputs effectively. To test more effectively, the code would need to be refactored in a way, that each phase is represented by at least one method. This way, each phase could be tested independently.
 
 ## Part 2: Test Driven Development
-**Reversing a List**
+
+### Deleting the first link
+
+In order to delete a link, we first need to have a LinkedList filled with some nodes. So the test-case needs to create a list with nodes and then makes an attempt to delete the first one. This can be monitored using the _size_ of the LinkedList
+
+´´´java
+
+    public void removeFromLinkedList(){
+        LinkedList<String> ll = new LinkedList<>();
+        ll.add(new Node<>("HUHU"));
+        ll.add(new Node<>("HAHA"));
+        ll.add(new Node<>("HIHI"));
+        ll.remove();
+        assertEquals(2,ll.getListLength());
+    }
+    //...the actual method:
+    void remove(){
+        //deletes the first link
+      if (head != null){
+          head = head.next;
+          listLength--;
+      }
+    }
+   
+´´´
+
+### Reversing a List
+
 As the assignment told us we started by implementing test cases for a linked list.
 For this we created a new class called `LinkedListTest`.
 In there we created tests for reversing a single item list, an empty list and a multiple item list.
