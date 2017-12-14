@@ -97,11 +97,11 @@ Test cases are actually a combination of the follow:
 
 Test Cases:
 
-(1) (I) -> exit(1)
-(2) -> (IV) -> exit(1)
-(3) -> (III) -> (V)  -> (IX) -> end
-(4) -> (III) -> (VI) -> (X) -> end 
-(5) -> (III) -> (VII) -> (X) -> end 
+- (1) (I) -> exit(1)
+- (2) -> (IV) -> exit(1)
+- (3) -> (III) -> (V)  -> (IX) -> end
+- (4) -> (III) -> (VI) -> (X) -> end 
+- (5) -> (III) -> (VII) -> (X) -> end 
 
 ### 4. Reflection:
 Due to its progressive nature, one can hardly test inputs and outputs effectively. To test more effectively, the code would need to be refactored in a way, that each phase is represented by at least one method. This way, each phase could be tested independently.
