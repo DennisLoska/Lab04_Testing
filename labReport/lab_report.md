@@ -48,8 +48,10 @@ over 100: B (instead of error message)
 
 ### 3. White-box-test:
 
-In general, we can speak of up to 7 independent paths - as due to various contraints introducing new nodes.
+In general, we can speak of up to 5 independent paths - as due to various contraints introducing new nodes.
 For clarification, please take a look at the code graph. 
+
+![alt text](https://web.whatsapp.com/8e6e5a11-0dae-4249-9b35-b1edcf8cc023)
 
 	Overview of conditions
 (1)	if (income < 0)
@@ -61,16 +63,22 @@ For clarification, please take a look at the code graph.
 
 Test cases are actually a combination of the follow:
 
-- incomeLessThanZero()
-- incomeGreaterThanZero()
-- FamilyMembersGreaterThanZero()
-- FamilyMembersLessThanZero()
-- incomeGreater10000()
-- incomeLess10000()
-- incomeGreater50000()
-- incomeLess50000()
-- taxTotalLessZero()
+- (I): incomeLessThanZero()
+- (III): FamilyMembersGreaterThanZero()
+- (IV): FamilyMembersLessThanZero()
+- (V): incomeIsZero()
+- (VI): incomeLess10000ButGreaterZero()
+- (VII): incomeLess50000ButGreater10000()
+- (IX): taxTotalLessZero()
+- (X): taxTotalGreaterZero()
 
+Test Cases:
+
+(1) (I) -> exit(1)
+(2) -> (IV) -> exit(1)
+(3) -> (III) -> (V)  -> (IX) -> end
+(4) -> (III) -> (VI) -> (X) -> end 
+(5) -> (III) -> (VII) -> (X) -> end 
 
 ### 4. Reflection:
 Due to its progressive nature, one can hardly test inputs and outputs effectively. To test more effectively, the code would need to be refactored in a way, that each phase is represented by at least one method. This way, each phase could be tested independently.
